@@ -23,7 +23,7 @@ public class Crawler {
         InputStream in = new FileInputStream("src/main/resources/config.properties");
         Properties properties = new Properties();
         properties.load(in);
-        MAX_PAGES_TO_SEARCH = Integer.parseInt(properties.getProperty("maxPageToSearch"));
+        this.MAX_PAGES_TO_SEARCH = Integer.parseInt(properties.getProperty("maxPageToSearch"));
         while (this.pagesVisited.size() < MAX_PAGES_TO_SEARCH) {
             String currentUrl;
             CrawlerUtil crawlerUtil = new CrawlerUtil();
